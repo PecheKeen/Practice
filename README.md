@@ -1,2 +1,2 @@
 # Practice
-Collection of Small Projects for learning purposes
+Collection of small projects for learning purposes
