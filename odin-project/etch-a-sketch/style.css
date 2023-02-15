@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+#main {
+    display: grid;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.grid {
+    display: grid;
+    gap: .5px;
+    width: 35vw;
+    height: 35vw;
+    min-width: 350px;
+    min-height: 350px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.buttons button {
+    background-color: #ccc;
+    color: #333;
+    border: #999 2px solid;
+    width: 8vw;
+    min-width: 75px;
+    height: 2vw;
+    min-height: 25px; 
+}
+
+.resize {
+    display: flex;
+    justify-content: center;
+}
