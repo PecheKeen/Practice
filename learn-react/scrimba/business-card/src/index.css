@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:'Inter', sans-serif;
+  background-color: bisque;
+  color: #332b20;
+}
+
+#root {
+  position: relative;
+  height: 140vh;
+  width: 100vw;
+}
+
+.app {
+  width: 350px;
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  margin: -175px 0 0 -175px;
+  background-color: #e6c18d;
+  border-radius: 2rem;
+  filter: drop-shadow(1px 2px 3px #b79a71);
+}
+
+.headshot > .photo {
+  width: 350px;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.info {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.info .name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.info .title {
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.info .website {
+  font-size: .75rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.info .btn-container {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .btn-container > button {
+  border: none;
+  border-radius: .5rem;
+  width: 8.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+}
+
+.icon {
+  padding: .2rem;
+}
+
+.btn-linkedin {
+  background-color: #332b20;
+  color: bisque;
+}
+
+.btn-linkedin:hover {
+  background-color: #271f13;
+  filter: drop-shadow(1px 1px 1px bisque);
+}
+
+.btn-email {
+  background-color: rgb(250, 231, 207);
+  color:#332b20
+}
+
+.btn-email:hover {
+  filter: drop-shadow(1px 1px 2px #332b20);
+}
+
+.about, .interests {
+  padding-top: .5rem;
+  margin: 0 2rem;
+}
+
+.sec-title {
+  padding: .5rem 0;
+}
+
+.sec-text {
+  font-size: .9rem;
+  line-height: 1.5rem;
+  letter-spacing: .015rem;
+  padding-left: .5rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  width: 350px;
+  background-color: #ac844b;
+  border-radius: 0 0 2rem 2rem;
+  filter: drop-shadow(1px 0px 1px #b79a71);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-icon {
+  padding: .5rem 0;
+}
+
+.footer-icon:hover {
+  cursor: pointer;
+}
+
