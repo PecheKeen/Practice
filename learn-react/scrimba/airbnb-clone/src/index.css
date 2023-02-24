@@ -1,19 +1,33 @@
-
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family:'Poppins', sans-serif;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav {
   height: 70px;
   display: flex;
-  padding: 2rem 3rem;
-  box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.1);
+  padding: 20px 36px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: #918E9B;
+}
+
+.nav--logo {
+  max-width: 100px;
 }
 
 section {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .hero {
@@ -21,51 +35,65 @@ section {
   flex-direction: column;
 }
 
-.hero-photo {
+.hero--photo {
   max-width: 400px;
   align-self: center;
 }
 
-.hero-header {
-  margin-bottom: 1rem;
+.hero--header {
+  margin-bottom: 16px;
 }
 
-.hero-text {
+.hero--text {
   margin-top: 0;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
 }
 
 .card {
   width: 175px;
-  font-size: .75rem;
-}
-.card-photo-container {
+  font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
-.card-photo {
-  border-radius: .75rem;
+
+.card--image {
   width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
 }
 
-.card-photo-overlay {
-  background-color: white;
-  position: absolute;
-  border-radius: .1rem;
-  padding: 0rem .2rem;
-  left: 10px;
-  top: 10px;
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.card-details {
+.card--stats {
   display: flex;
   align-items: center;
-  margin: .2rem 0 0 0;
 }
 
-.card-details > img {
-  margin-right: .2rem;
-  width: 15px;
+.card--star {
+  height: 14px;
 }
 
-.card-details-light {
-  opacity: 40%;
+.card--price {
+  margin-top: auto;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }

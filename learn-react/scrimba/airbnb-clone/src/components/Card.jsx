@@ -1,23 +1,23 @@
-import star from "../images/star.png"
-import photo from "../images/katie-zaferes.png"
 
 function Card( props ) {
+  let badgeText
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === 'Online') {
+    badgeText = "ONLINE";
+  }
   return (
     <div className="card">
-      <div className="card-photo-container">
-        <img src={photo} alt="event" className="card-photo"/>
-        <div className="card-photo-overlay">SOLD OUT</div>
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <img src={"images/" + props.coverImg} alt="event" className="card--image"/>
+      <div className="card--stats">
+        <img src="images/star.png" alt="rating" className="card--star"/>
+        <span>{props.stats.rating}</span>
+        <span className="gray">({props.stats.reviewCount})</span>
+        <span className="gray">&nbsp;• {props.location}</span>
       </div>
-      <div className="card-event-details">
-        <div className="card-details">
-          <img src={star} alt="rating" />
-          <span>{props.rating}</span>
-          <span className="card-details-light">({props.reviewCount})</span>
-          <span className="card-details-light">&nbsp;• {props.country}</span>
-        </div>
-        <p className="card-details">{props.title}</p>
-        <p className="card-details"><strong>From ${props.price}</strong> / person</p>
-      </div>
+      <p className="card--title">{props.title}</p>
+      <p className="card--price"><span className="bold">From ${props.price}</span> / person</p>
     </div>
   )
 }
