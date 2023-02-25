@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f55a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header--logo {
+  height: 24px;
+}
+
+.header--title {
+  color: white;
+  font-size: 1rem;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.tile--image {
+  width: 125px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.tile--info {
+  padding-left: 1rem;
+}
+
+.tile--country-info {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  padding-top: .5rem;
+}
+
+.tile--country {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.tile--google-maps-url {
+  color: #918E9B;
+  margin-left: .75rem;
+}
+
+.tile--location {
+  font-size: 25px;
+  margin: .5rem 0 1rem 0;
+}
+
+.tile--dates {
+  font-size: 11px;
+  margin: 0;
+}
+
+.tile--description {
+  width: 325px;
+  font-size: 11px;
+  line-height: 1.1rem;
+}
