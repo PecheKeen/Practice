@@ -11,6 +11,8 @@ function Meme() {
 
     const [allMemeImages, setAllMemeImages] = React.useState(memesData);
 
+    console.log(meme);
+
     function getMemeImage() {
         const memesArray = allMemeImages.data.memes;
         const randomNumber = Math.floor(Math.random() * memesArray.length)
@@ -23,18 +25,32 @@ function Meme() {
         })
     }
 
+    function handleChange(event) {
+        const {name, value} = event.target;
+        setMeme((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }))
+    }
+
     return (
         <main>
             <div className="form">
                 <input 
                     type="text"
                     placeholder="Top text"
+                    name="topText"
                     className="form--input"
+                    value={meme.topText}
+                    onChange={handleChange}
                 />
                 <input 
                     type="text" 
                     placeholder="Bottom text"
+                    name="bottomText"
                     className="form--input"
+                    value={meme.bottomText}
+                    onChange={handleChange}
                 />
                 <button 
                     onClick={getMemeImage} 
@@ -43,7 +59,11 @@ function Meme() {
                     Get a new meme image 🖼
                 </button>
             </div>
-            <img src={meme.randomImage} alt="a meme" className="meme--image" />
+            <div className="meme">
+                <img src={meme.randomImage} alt="Random Meme" className="meme--image" />
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>        
         </main>
     )
 }
